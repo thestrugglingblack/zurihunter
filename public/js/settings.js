@@ -50,9 +50,10 @@ $(document).ready(function () {
  #Progress Bar For Skills Page
  ========================================================================== */
 
-progressBar(99, $('#progressBar'));
-progressBar(80, $('#progressBar2'));
-progressBar(60, $('#progressBar3'));
+progressBar(85, $('#progressBarOne'));
+progressBar(80, $('#progressBarTwo'));
+progressBar(75, $('#progressBarThree'));
+progressBar(30, $('#progressBarFour'));
 
 /* ==========================================================================
  #Mobile Menu

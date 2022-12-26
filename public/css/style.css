@@ -61,11 +61,11 @@ a:hover {
 }
 ::selection {
     color: #000;
-    background: none repeat scroll 0 0 #ffb400;
+    background: none repeat scroll 0 0 #FF93AC;
 }
 ::-moz-selection {
     color:#000;
-    background: none repeat scroll 0 0 #ffb400;
+    background: none repeat scroll 0 0 #FF93AC;
 }
 * {
     outline: 0!important;
@@ -120,7 +120,7 @@ input[type="text"], textarea {
     -webkit-user-select: text;
 }
 input[type="submit"] {
-    border: 2px solid #ffb400;
+    border: 2px solid #FF93AC;
     background-color: transparent;
     color: #a6a6a6;
     font-weight: 400;
@@ -139,10 +139,10 @@ input[type="submit"] {
 input[type="text"]:focus, textarea:focus {
     outline: none;
     color: #545454;
-    border: 1px solid #ffb400;
+    border: 1px solid #FF93AC;
 }
 input[type="submit"]:hover {
-    background-color: #ffb400;
+    background-color: #FF93AC;
     color: #fff;
 }
 input[type="text"], input[type="email"], input[type="search"], input[type="password"], textarea, input[type="submit"], input[type="button"] {
@@ -201,7 +201,7 @@ h5 {
 .title-divider {
     width: 70px;
     height: 5px;
-    background-color: #ffb400;
+    background-color: #FF93AC;
     margin: 30px 0 50px 0
 }
 .full-divider {
@@ -218,7 +218,7 @@ h5 {
     background-color: #FFFFF
 }
 .button {
-    border: 2px solid #ffb400;
+    border: 2px solid #FF93AC;
     background-color: #FFF;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
@@ -235,8 +235,8 @@ h5 {
     -o-transition-duration: .2s;
 }
 .button:hover {
-    border: 2px solid #ffb400;
-    background-color: #ffb400;
+    border: 2px solid #FF93AC;
+    background-color: #FF93AC;
     color: #fff;
 }
 /* ==========================================================================
@@ -410,11 +410,11 @@ h5 {
     -o-transition-duration: .2s;
 }
 .menu nav a span.active {
-    color: #ffb400;
+    color: #FF93AC;
     font-weight: 400
 }
 .menu nav a:hover {
-    color: #ffb400;
+    color: #FF93AC;
     text-decoration: none;
 }
 .menu nav a span:nth-child(2) {
@@ -734,7 +734,7 @@ a.totop-link {
     font-weight: 400;
     letter-spacing: -1px;
     margin: 21px 0 0 0;
-    color: #ffb400;
+    color: #FF93AC;
 }
 .percent:after {
     content: '%';
@@ -763,7 +763,7 @@ a.totop-link {
 
 .experience-con .icon-block i {
     font-size: 60px;
-    color: #ffb400;
+    color: #FF93AC;
     margin: 8px 0 0
 }
 .experience-con h5 {
@@ -805,7 +805,7 @@ a.totop-link {
    ========================================================================== */
 .education-con .icon-block i {
     font-size: 60px;
-    color: #ffb400;
+    color: #FF93AC;
     margin: 8px 0 0
 }
 .education-con h5 {
@@ -850,7 +850,7 @@ a.totop-link {
 }
 .contact-details i {
     font-size: 45px;
-    color: #ffb400
+    color: #FF93AC
 }
 .contact-details strong {
     color: #000;
@@ -934,7 +934,7 @@ a.totop-link {
     border-top: 1px solid #333333;
     border-bottom: 1px solid #333333;
     padding: 10px 0;
-    color: #ffb400;
+    color: #FF93AC;
     font-weight: normal;
 }
 .introduction-end-con .rotate {
@@ -1100,7 +1100,7 @@ iframe, embed, object {
     font-weight: 600
 }
 .calendar a {
-    border-bottom: 2px solid #ffb400;
+    border-bottom: 2px solid #FF93AC;
     font-weight: 600
 }
 .tagcloud {

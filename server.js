@@ -1,8 +1,12 @@
 const path = require('path')
+
 const express = require('express')
-const hbs = require('express-handlebars')
+const { engine } = require('express-handlebars')
+
 const server = express();
 const router = express.Router();
+
+const { content } = require('./js/content')
 
 /*
 * TODO:
@@ -13,9 +17,14 @@ const router = express.Router();
 *  5. Dev.to API
 * */
 
-server.engine('handlebars', hbs())
+server.engine('handlebars', engine({ defaultLayout: false}))
 server.set('view engine', 'handlebars')
-server.use(express.static('public'))
-server.use('/', router)
+// server.use(express.static('views'))
+server.use(express.static(path.join(__dirname, '/public')));
+
+server.get('/', (req,res) => {
+    res.render('index', { layout: false, content})
+})
+// server.use('/', router)
 server.listen(1992)
 console.log('Running at Port 1992')

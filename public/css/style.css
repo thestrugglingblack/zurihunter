@@ -431,7 +431,7 @@ h5 {
 .social {
     padding: 30px;
     position: absolute;
-    top: 619px;
+    top: 700px;
 }
 .social a {
     font-size: 20px;
@@ -1299,4 +1299,11 @@ iframe, embed, object {
         height:auto;
         width:auto;
     }
+}
+
+/* ==========================================================================
+   #Publications and Achievements Screen
+   ========================================================================== */
+.pa-spacing {
+    padding-left: 5px;
 }

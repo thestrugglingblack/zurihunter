@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../css/scroll.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
     <!-- Portfolio Thumbnail / Slider -->
     <link rel="stylesheet" type="text/css" href="../css/portfolio.css" />
@@ -41,7 +42,61 @@
         <!-- Mobile Navigation-->
         <a href="#menu1" class="menu-link"></a>
         <!-- Left Navigation-->
-        <nav id="menu1" role="navigation"> <a href="#chapterintroduction"><span id="link_introduction" class="active">Home</span></a> <a href="#chapterabout"><span id="link_about">About</span></a> <a href="#chapterskills"><span id="link_skills">Skills</span></a> <a href="#chapterexperience"><span id="link_experience">Experience</span></a> <a href="#chaptereducation"><span id="link_education">Education</span></a> <a href="#chapterportfolio"><span id="link_portfolio">Portfolio</span></a><a href="#chaptercontact"><span id="link_contact">Contact</span></a><a href="../blog.html"><span id="link_blog">Blog</span></a></nav>
+        <nav id="menu1" role="navigation">
+            <a href="#chapterintroduction">
+                <span id="link_introduction" class="active">
+                    Home
+                </span>
+            </a>
+
+            <a href="#chapterabout">
+                <span id="link_about">
+                    About
+                </span>
+            </a>
+
+            <a href="#chapterskills">
+                <span id="link_skills">
+                    Skills
+                </span>
+            </a>
+
+            <a href="#chapterexperience">
+                <span id="link_experience">
+                    Experience
+                </span>
+            </a>
+
+            <a href="#chaptereducation">
+                <span id="link_education">
+                    Education
+                </span>
+            </a>
+
+            <a href="#chapterpublicationsachievements">
+                <span id="link_publicationsachievements">
+                    Publications & Achievements
+                </span>
+            </a>
+
+            <a href="#chapterportfolio">
+                <span id="link_portfolio">
+                    Portfolio
+                </span>
+            </a>
+
+            <a href="#chaptercontact">
+                <span id="link_contact">
+                    Contact
+                </span>
+            </a>
+
+            <a href="../blog.html">
+                <span id="link_blog">
+                    Blog
+                </span>
+            </a>
+        </nav>
         <div class="social"> <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> <a href="https://twitter.com" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> <a href="https://plus.google.com" target="_blank" class="google-plus"><i class="fa fa-google-plus"></i></a> </div>
         <div class="copyright"> © Zuri Hunter.<br>
             All Rights Reserved. </div>
@@ -178,65 +233,31 @@
                     <h2>Experience</h2>
                     <div class="title-divider"></div>
                     <h3>{{content.yearsOfExp}} Years Experience!</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
+                    <p> {{content.experienceSubHeader}}</p>
                     <div class="experience-con">
                         <div class="container-sub">
+
                             <div class="full-divider"></div>
                             <div class="row">
-                                <div class="experience-details">
-                                    <div class="col-6 margin-bottom50 margin-top50">
-                                        <div class="col-3 icon-block"><i class="fa fa-send-o"></i></div>
-                                        <div class="flot-left">
-                                            <h5>Panara Media</h5>
-                                            <h4>Art Director</h4>
-                                            <span>2014 - 2013</span> </div>
+                                {{#each content.experience}}
+                                    <div class="experience-details">
+                                        <div class="col-6 margin-bottom50 margin-top50">
+                                            <div class="col-3 icon-block"><i class="{{icon}}"></i></div>
+                                            <div class="flot-left">
+                                                <h5>{{companyName}}</h5>
+                                                <h4>{{position}}</h4>
+                                                <span>{{years}}</span> </div>
+                                        </div>
+                                        <div class="col-6 margin-bottom50 margin-top50 no-margin-top">
+                                            <ul>
+                                                {{#each description}}
+                                                    <li>{{this}}</li>
+                                                {{/each}}
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="col-6 margin-bottom50 margin-top50 no-margin-top"> Phasellus nec gravida purus. Aliquam ac enim vel ipsum consectetur vulputate. Duis quis feugiat neque. Pellentesque eleifend, nisi vel mattis vestibulum, est lacus pretium quam. </div>
-                                </div>
-                                <div class="full-divider"></div>
-                                <div class="experience-details">
-                                    <div class="col-6 margin-bottom50 margin-top50">
-                                        <div class="col-3 icon-block"><i class="fa fa-briefcase"></i></div>
-                                        <div class="flot-left">
-                                            <h5>Ace Advertising</h5>
-                                            <h4>Project Manager</h4>
-                                            <span>2013 - 2011</span> </div>
-                                    </div>
-                                    <div class="col-6 margin-bottom50 margin-top50 no-margin-top"> Phasellus nec gravida purus. Aliquam ac enim vel ipsum consectetur vulputate. Duis quis feugiat neque. Pellentesque eleifend, nisi vel mattis vestibulum, est lacus pretium quam. </div>
-                                </div>
-                                <div class="full-divider"></div>
-                                <div class="experience-details">
-                                    <div class="col-6 margin-bottom50 margin-top50">
-                                        <div class="col-3 icon-block"><i class="fa fa-arrows-alt"></i></div>
-                                        <div class="flot-left">
-                                            <h5>Linksture Web</h5>
-                                            <h4>Senior UX Designer</h4>
-                                            <span>2011 - 2008</span> </div>
-                                    </div>
-                                    <div class="col-6 margin-bottom50 margin-top50 no-margin-top"> Phasellus nec gravida purus. Aliquam ac enim vel ipsum consectetur vulputate. Duis quis feugiat neque. Pellentesque eleifend, nisi vel mattis vestibulum, est lacus pretium quam. </div>
-                                </div>
-                                <div class="full-divider"></div>
-                                <div class="experience-details">
-                                    <div class="col-6 margin-bottom50 margin-top50">
-                                        <div class="col-3 icon-block"><i class="fa fa-quote-right"></i></div>
-                                        <div class="flot-left">
-                                            <h5>Matrix Media</h5>
-                                            <h4>Visual / UI Designer</h4>
-                                            <span>2008 - 2006</span> </div>
-                                    </div>
-                                    <div class="col-6 margin-bottom50 margin-top50 no-margin-top"> Phasellus nec gravida purus. Aliquam ac enim vel ipsum consectetur vulputate. Duis quis feugiat neque. Pellentesque eleifend, nisi vel mattis vestibulum, est lacus pretium quam. </div>
-                                </div>
-                                <div class="full-divider"></div>
-                                <div class="experience-details">
-                                    <div class="col-6 margin-bottom50 margin-top50">
-                                        <div class="col-3 icon-block"><i class="fa fa-bullhorn"></i></div>
-                                        <div class="flot-left">
-                                            <h5>Creatika Agency</h5>
-                                            <h4>Graphic Designer</h4>
-                                            <span>2006 - 2004</span> </div>
-                                    </div>
-                                    <div class="col-6 margin-bottom50 margin-top50 no-margin-top"> Phasellus nec gravida purus. Aliquam ac enim vel ipsum consectetur vulputate. Duis quis feugiat neque. Pellentesque eleifend, nisi vel mattis vestibulum, est lacus pretium quam. </div>
-                                </div>
+                                    <div class="full-divider"></div>
+                                {{/each}}
                             </div>
                         </div>
                     </div>
@@ -248,44 +269,66 @@
                 <div class="inner">
                     <h2>Education</h2>
                     <div class="title-divider"></div>
-                    <h3>Just My Education</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
+                    <h3>Education is Key.</h3>
+                    <p>{{content.educationSubHeader}}</p>
                     <div class="education-con">
                         <div class="container-sub">
                             <div class="full-divider"></div>
                             <div class="row">
-                                <div class="education-details">
-                                    <div class="col-6 margin-bottom50 margin-top50">
-                                        <div class="col-3 icon-block"><i class="fa fa-photo"></i></div>
-                                        <div class="flot-left">
-                                            <h5>University of Design</h5>
-                                            <h4>Bachelor of Arts</h4>
-                                            <span>2009 - 2010</span> </div>
+
+                                {{#each content.education}}
+                                    <div class="education-details">
+                                        <div class="col-6 margin-bottom50 margin-top50">
+                                            <div class="col-3 icon-block"><i class="fa fa-laptop"></i></div>
+                                            <div class="flot-left">
+                                                <h5>{{universityName}}</h5>
+                                                <h4>{{major}}</h4>
+                                                <span>{{degreeType}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 margin-bottom50 margin-top50 no-margin-top">
+                                            {{description}}
+                                        </div>
                                     </div>
-                                    <div class="col-6 margin-bottom50 margin-top50 no-margin-top"> Phasellus nec gravida purus. Aliquam ac enim vel ipsum consectetur vulputate. Duis quis feugiat neque. Pellentesque eleifend, nisi vel mattis vestibulum, est lacus pretium quam. </div>
-                                </div>
+                                    <div class="full-divider"></div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Publications & Achievements -->
+            <article class="content publicationsAchievements white-bg" id="chapterpublicationsachievements">
+                <div class="inner">
+                    <h2>Publications & Achievements</h2>
+                    <div class="title-divider"></div>
+                    <div class="education-con">
+                        <div class="container-sub skill-list">
+                            <div class="full-divider"></div>
+                            <div class="row">
+                                <h3>Awards</h3>
+                                {{#each content.awards}}
+                                    <p><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span class="pa-spacing"></span><b><a href="{{link}}" target="_blank" rel="noopener noreferrer">{{year}} {{name}}</a></b> </p>
+                                {{/each}}
+
                                 <div class="full-divider"></div>
-                                <div class="education-details">
-                                    <div class="col-6 margin-bottom50 margin-top50">
-                                        <div class="col-3 icon-block"><i class="fa fa-laptop"></i></div>
-                                        <div class="flot-left">
-                                            <h5>Boston State University</h5>
-                                            <h4>Visual Art & Design</h4>
-                                            <span>2006 - 2007</span> </div>
-                                    </div>
-                                    <div class="col-6 margin-bottom50 margin-top50 no-margin-top"> Phasellus nec gravida purus. Aliquam ac enim vel ipsum consectetur vulputate. Duis quis feugiat neque. Pellentesque eleifend, nisi vel mattis vestibulum, est lacus pretium quam. </div>
-                                </div>
+                                <h3>Talks</h3>
+                                {{#each content.talks}}
+                                    <p><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span class="pa-spacing"></span> <b><a href="{{link}}" target="_blank" rel="noopener noreferrer">{{title}}</a></b></p>
+                                {{/each}}
+
                                 <div class="full-divider"></div>
-                                <div class="education-details">
-                                    <div class="col-6 margin-bottom50 margin-top50">
-                                        <div class="col-3 icon-block"><i class="fa fa-life-bouy"></i></div>
-                                        <div class="flot-left">
-                                            <h5>Boston State University</h5>
-                                            <h4>Degree of Design</h4>
-                                            <span>2004 - 2005</span> </div>
-                                    </div>
-                                    <div class="col-6 margin-bottom50 margin-top50 no-margin-top"> Phasellus nec gravida purus. Aliquam ac enim vel ipsum consectetur vulputate. Duis quis feugiat neque. Pellentesque eleifend, nisi vel mattis vestibulum, est lacus pretium quam. </div>
-                                </div>
+                                <h3>Podcasts</h3>
+                                {{#each content.podcasts}}
+                                    <p><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span class="pa-spacing"></span> <b><a href="{{link}}" target="_blank" rel="noopener noreferrer">{{podcast}} - {{title}}</a></b></p>
+                                {{/each}}
+
+                                <div class="full-divider"></div>
+                                <h3>Publications</h3>
+                                {{#each content.publications}}
+                                    <p><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span class="pa-spacing"></span> <b><a href="{{link}}" target="_blank" rel="noopener noreferrer">{{title}}</a></b></p>
+                                {{/each}}
                             </div>
                         </div>
                     </div>
@@ -293,16 +336,18 @@
             </article>
 
             <!-- Pportfolio -->
-            <article class="content portfolio white-bg" id="chapterportfolio">
+            <article class="content portfolio gray-bg" id="chapterportfolio">
                 <div class="inner">
                     <h2>Portfolio</h2>
                     <div class="title-divider"></div>
-                    <h3>Our portfolio features a variety of projects and services</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
+                    <h3>GitHub + GitLab</h3>
+                    <p>{{content.portfolioSubHeader}}</p>
                     <div class="portfolio-con">
                         <div class="container-sub margin-top50">
                             <div class="row">
                                 <div id="grid-gallery" class="grid-gallery">
+
+                                    <div id="github-repos"></div>
                                     <section class="grid-wrap">
                                         <ul class="grid">
                                             <li>
@@ -426,39 +471,37 @@
             </article>
 
             <!-- Contact -->
-            <article class="content contact gray-bg" id="chaptercontact">
+            <article class="content contact white-bg" id="chaptercontact">
                 <div class="inner">
                     <h2>Contact</h2>
                     <div class="title-divider"></div>
                     <h3>Let's Keep In Touch</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
+                    <p>{{content.contactSubHeader}}</p>
                     <div class="full-divider"></div>
                     <div class="contact-con margin-top50">
                         <div class="container-sub">
                             <div class="row">
                                 <div class="contact-details">
-                                    <div class="col-6">
-                                        <div class="contact-text">
-                                            <div class="col-2 icon-block address"><i class="fa fa-map-marker"></i></div>
-                                            <div class="flot-left"> <strong>Andrew Smith</strong><br>
-                                                PO Box 16122 Collins Street West,<br>
-                                                Victoria 8007, United States. </div>
-                                        </div>
-                                        <div class="contact-text">
-                                            <div class="col-2 icon-block phone"><i class="fa fa-phone"></i></div>
-                                            <div class="flot-left"> <strong>Phone</strong><br>
-                                                +123-456-7890 </div>
-                                        </div>
-                                        <div class="contact-text">
-                                            <div class="col-2 icon-block email"><i class="fa fa-envelope"></i></div>
-                                            <div class="flot-left"> <strong>Email</strong><br>
-                                                <a href="mailto:no-reply@domain.com">no-reply@domain.com</a> </div>
-                                        </div>
-                                    </div>
+                                    <div class="col-12">
+<!--                                        <div class="contact-text">-->
+<!--                                            <div class="col-2 icon-block address"><i class="fa fa-twitter"></i></div>-->
+<!--                                            <div class="flot-left"><a href={{content.socialMedia.twitter}}> <strong>@ZuriHunter</strong></a><br></div>-->
+<!--                                        <div class="contact-text">-->
+<!--                                            <div class="col-2 icon-block phone"><i class="fa fa-linkedin"></i></div>-->
+<!--                                            <div class="flot-left"> <a href={{content.socialMedia.linkedin}}><strong>LinkedIn</strong></a><br></div>-->
+<!--                                        </div>-->
+<!--                                        <div class="contact-text">-->
+<!--                                            <div class="col-2 icon-block email"><i class="fa fa-twitch"></i></div>-->
+<!--                                            <div class="flot-left"> <a href={{content.socialMedia.twitch}}><strong>@thestrugglingblack</strong></a><br></div>-->
+<!--                                    </div>-->
                                     <div class="col-6 m-margin-top30">
                                         <h3>I'm also on Social Networks</h3>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor.
-                                        <div class="contact-social margin-top30"><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a> <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a> <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a><a href="https://plus.google.com" target="_blank"><i class="fa fa-google-plus"></i></a><a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a> </div>
+                                        {{content.socialMediaSubHeader}}
+                                        <div class="contact-social margin-top30">
+                                            <a href={{content.socialMedia.twitch}} target="_blank"><i class="fa fa-twitch"></i></a>
+                                            <a href={{content.socialMedia.twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
+                                            <a href={{content.socialMedia.linkedin}} target="_blank"><i class="fa fa-linkedin"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -488,8 +531,8 @@
                     <div class="introduction-end-con margin-top50">
                         <h3><strong>Zuri Hunter</strong></h3>
                         <div id="rotate" class="rotate">
-                            <div><span>awesome.</span></div>
-                            <div><span>invincible.</span></div>
+                            <div><span>tenacious.</span></div>
+                            <div><span>self-sufficient.</span></div>
                             <div><span>unbeatable.</span></div>
                             <div><span>indestructible.</span></div>
                         </div>
@@ -533,5 +576,6 @@
 <script type="text/javascript"  src="../js/jquery.fitvids.js"></script>
 <!-- All Javascript Component-->
 <script src="../js/settings.js"></script>
+<script src="../js/portfolio.js" type="module"></script>
 </body>
 </html>

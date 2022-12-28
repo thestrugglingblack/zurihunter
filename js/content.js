@@ -190,8 +190,7 @@ const content = {
         }
     ],
     portfolioSubHeader: 'This is a detailed list of all of side projects that I have worked on in my past time.',
-    contactSubHeader: 'Please feel free to reach out to me if you are interested in having me on as a speaker or have proposal for freelance opportunities.',
-    socialMediaSubHeader: 'Drop a follow and like for any of my posts on social media.',
+    contactSubHeader: 'Please feel free to reach out to me if you are interested in having me on as a speaker and drop a follow on social media.',
     socialMedia: {
         twitter: 'https://twitter.com/ZuriHunter',
         linkedin: 'https://www.linkedin.com/in/zuri-hunter-748ba514/',

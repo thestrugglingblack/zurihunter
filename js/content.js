@@ -194,7 +194,9 @@ const content = {
     socialMedia: {
         twitter: 'https://twitter.com/ZuriHunter',
         linkedin: 'https://www.linkedin.com/in/zuri-hunter-748ba514/',
-        twitch: 'https://www.twitch.tv/thestrugglingblack'
+        twitch: 'https://www.twitch.tv/thestrugglingblack',
+        gitlab: 'https://www.gitlab.com/thestrugglingblack',
+        github: 'https://www.github.com/thestrugglingblack'
     }
 
 }

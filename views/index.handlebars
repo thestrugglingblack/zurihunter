@@ -373,7 +373,7 @@
             </article>
 
             <!-- Contact -->
-            <article class="content contact gray-bg" id="chaptercontact">
+            <article class="content contact white-bg" id="chaptercontact">
                 <div class="inner">
                     <h2>Contact</h2>
                     <div class="title-divider"></div>
@@ -435,7 +435,7 @@
                 </div>
             </article>
 
-            <!-- Introduction -->
+            <!-- Introduction TODO: -->
             <article class="content introduction-end" id="chapterthankyou">
                 <div class="inner">
                     <div class="introduction-end-con margin-top50">
@@ -481,6 +481,30 @@
             {smartresize: "js/jquery.smartresize.js"},
             {page: "js/jquery.page.js"}
     );
+</script>
+<!-- Contact Form -->
+<script>
+    $(document).ready(function() {
+        $('#form1').on('submit', function(e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: '/message',
+                type: 'POST',
+                data: {
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    message: $('#message').val()
+                },
+                success: function(data) {
+                    $('#successmsg').html(data.message);
+                },
+                error: function(error) {
+                    $('#successmsg').html(error.responseJSON.message);
+                }
+            });
+        });
+    });
 </script>
 <!-- Fit Video -->
 <script type="text/javascript" src="../js/jquery.fitvids.js"></script>

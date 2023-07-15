@@ -481,10 +481,11 @@ h5 {
     height: 100%;
     overflow: hidden;
 }
-/*.content:last-child {*/
-/*    width: 1720px;*/
-/*    background-color: #000;*/
-/*}*/
+
+.content:last-child {
+    width: 1720px;
+    background-color: #000;
+}
 
 .content {
     width: 804px;

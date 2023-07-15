@@ -481,10 +481,11 @@ h5 {
     height: 100%;
     overflow: hidden;
 }
-.content:last-child {
-    width: 1720px;
-    background-color: #000;
-}
+/*.content:last-child {*/
+/*    width: 1720px;*/
+/*    background-color: #000;*/
+/*}*/
+
 .content {
     width: 804px;
     overflow-y: scroll;
@@ -607,7 +608,7 @@ a.totop-link {
    ========================================================================== */
 
 .about {
-    background: url(http://placehold.it/1100x1080/fff)no-repeat 100% 0 scroll;
+    /*background: url(http://placehold.it/1100x1080/fff)no-repeat 100% 0 scroll;   TODO: https://github.com/thestrugglingblack/zurihunter/issues/6*/
     background-size: contain;
 }
 .about .inner {
@@ -913,7 +914,7 @@ a.totop-link {
    #Last Screen
    ========================================================================== */
 .introduction-end {
-    background: url(http://placehold.it/1608x1080/000)no-repeat right top;
+    /*background: url(http://placehold.it/1608x1080/000)no-repeat right top; TODO: https://github.com/thestrugglingblack/zurihunter/issues/6 */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

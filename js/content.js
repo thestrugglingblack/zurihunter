@@ -70,14 +70,10 @@ const content = {
         {
             companyName:'Monumental Sports',
             position: 'Software Engineer',
-            years:'2023 - Present',
+            years:'2023 - 2023',
             icon: 'fa fa-university',
             description: [
-                'Migrated ETL pipelines from Integrate.io SubString to Prefect.',
-                'Implemented Elasticsearch to help improve searching engine capabilities for internal application.',
-                'Setup internal documentation for all microservices, resources and pipelines.',
-                'Decreased their internal application loading time by 30%.',
-                'Improve logging capabilities across all Google Cloud Platform resources that support their internal applications.'
+                'Setup internal documentation for all microservices, resources and pipelines.'
             ]
         },
 

@@ -3,9 +3,10 @@ const path = require('path')
 
 const express = require('express')
 const nodemailer = require('nodemailer');
-const sm = require('sitemap')
-
+const { SitemapStream, streamToPromise } = require('sitemap');
+const { Readable } = require('stream');
 const { engine,create } = require('express-handlebars')
+
 const server = express();
 
 const { content } = require('./js/content')
@@ -105,22 +106,38 @@ server.post('/message', (req, res) => {
     });
 });
 
-server.get('/sitemap.xml', (req,res) => {
-    if (!sitemap) {
-        const urls = [
-            { url: '/',  changefreq: 'weekly', priority: 1 },
-            { url: '/blog',  changefreq: 'monthly', priority: 0.8 }
-        ];
+server.get('/sitemap.xml', async (req,res) => {
+    try {
+        if (!sitemap) {
+            const urls = [
+                { url: '/',  changefreq: 'weekly', priority: 1 },
+                { url: '/blog',  changefreq: 'monthly', priority: 0.8 },
+                { url: 'https://twitter.com/zurihunter',  changefreq: 'weekly', priority: 0.7 },
+                { url: 'https://linkedin.com/in/zuri-hunter-748ba514/',  changefreq: 'monthly', priority: 0.6 },
+                { url: 'https://twitch.tv/thestrugglingblack',  changefreq: 'monthly', priority: 0.6 },
+                { url: 'https://www.gitlab.com/thestrugglingblack',  changefreq: 'monthly', priority: 0.6 },
+                { url: 'https://www.github.com/thestrugglingblack',  changefreq: 'monthly', priority: 0.6 },
+                { url: 'https://dev.to/zurihunter',  changefreq: 'monthly', priority: 0.6 }
+            ];
 
-        sitemap = sm.createSitemap ({
-            hostname: 'http://zurihunter.com',
-            cacheTime: 600000,
-            urls: urls
-        });
+            const stream = new SitemapStream({ hostname: 'http://zurihunter.com' });
+
+            urls.forEach(url => {
+                stream.write(url);
+            });
+
+            stream.end();
+            const sitemapXml = await streamToPromise(Readable.from(stream), { pretty: true });
+
+            sitemap = sitemapXml;
+        }
+
+        res.header('Content-Type', 'application/xml');
+        res.send(sitemap);
+    } catch (error) {
+        console.error(error);
+        res.status(500).end();
     }
-
-    res.header('Content-Type', 'application/xml');
-    res.send(sitemap.toString());
 })
 
 

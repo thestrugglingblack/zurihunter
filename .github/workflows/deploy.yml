@@ -24,6 +24,5 @@ jobs:
           ssh ${{ secrets.USER }}@${{ secrets.SERVER }} <<EOF
             cd ${{ secrets.PATH }}
             npm install
-            npm install pm2 -g
-            pm2 restart app.js
+            pm2 restart server.js
           EOF

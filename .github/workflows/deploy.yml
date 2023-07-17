@@ -38,6 +38,7 @@ jobs:
             cd ${{ secrets.PATH }}
             source ~/.bashrc
             source ${{ secrets.NVM_PATH }}/nvm.sh
+            echo "19.3.0" > .nvmrc
             nvm use
             chmod +x scripts/setup_env.sh
             bash scripts/setup_env.sh

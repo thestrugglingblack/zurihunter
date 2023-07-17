@@ -24,10 +24,11 @@
 
 ## Dependencies
 * Node v19.3.0
-* NPM
-* NVM
+* pm2
+* Digital Ocean
 
 ## Setup and Installation
 ## CI/CD
 ## Hosting
+
 ## Credit

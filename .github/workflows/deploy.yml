@@ -44,5 +44,5 @@ jobs:
             bash scripts/setup_env.sh
             ${{ secrets.NODE_PATH }}/npm install
             ls
-            ${{ secrets.NODE_PATH }}/pm2 restart server.js
+            ${{ secrets.NODE_PATH }}/pm2 restart ecosystem.config.js
           EOF

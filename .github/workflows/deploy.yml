@@ -23,6 +23,6 @@ jobs:
           scp -r ./* ${{ secrets.USER }}@${{ secrets.SERVER }}:${{ secrets.PATH }}
           ssh ${{ secrets.USER }}@${{ secrets.SERVER }} <<EOF
             cd ${{ secrets.PATH }}
-            npm install
-            pm2 restart server.js
+            ${{ secrets.NODE_PATH }}/npm install
+            ${{ secrets.NODE_PATH }}/pm2 restart server.js
           EOF

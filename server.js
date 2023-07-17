@@ -3,6 +3,7 @@ const path = require('path')
 
 const express = require('express')
 const nodemailer = require('nodemailer');
+const sm = require('sitemap')
 
 const { engine,create } = require('express-handlebars')
 const server = express();
@@ -14,6 +15,8 @@ const {
     EM_PASSWORD,
     EM_PROVIDER
 } = process.env
+
+let sitemap;
 
 /*
 * TODO:
@@ -101,6 +104,24 @@ server.post('/message', (req, res) => {
         }
     });
 });
+
+server.get('/sitemap.xml', (req,res) => {
+    if (!sitemap) {
+        const urls = [
+            { url: '/',  changefreq: 'weekly', priority: 1 },
+            { url: '/blog',  changefreq: 'monthly', priority: 0.8 }
+        ];
+
+        sitemap = sm.createSitemap ({
+            hostname: 'http://zurihunter.com',
+            cacheTime: 600000,
+            urls: urls
+        });
+    }
+
+    res.header('Content-Type', 'application/xml');
+    res.send(sitemap.toString());
+})
 
 
 server.listen(1992)

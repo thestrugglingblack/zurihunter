@@ -1,0 +1,29 @@
+name: Deploy Website
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+
+      - name: Deploy to DigitalOcean Droplet
+        run: |
+          scp -r ./* ${{ secrets.USER }}@${{ secrets.SERVER }}:${{ secrets.PATH }}
+          ssh ${{ secrets.USER }}@${{ secrets.SERVER }} <<EOF
+            cd ${{ secrets.PATH }}
+            npm install
+            npm install pm2 -g
+            pm2 restart app.js
+          EOF

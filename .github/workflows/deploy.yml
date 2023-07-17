@@ -36,6 +36,7 @@ jobs:
           scp -r ./* ${{ secrets.USER }}@${{ secrets.SERVER }}:${{ secrets.PATH }}
           ssh ${{ secrets.USER }}@${{ secrets.SERVER }} <<EOF
             cd ${{ secrets.PATH }}
+            source ~/.bashrc
             source $HOME/.nvm/nvm.sh
             nvm use
             chmod +x scripts/setup_env.sh

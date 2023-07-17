@@ -21,7 +21,12 @@
 * [Credit](#credit)
 
 ## Overview
+
 ## Dependencies
+* Node v19.3.0
+* NPM
+* NVM
+
 ## Setup and Installation
 ## CI/CD
 ## Hosting

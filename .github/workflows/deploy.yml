@@ -43,5 +43,6 @@ jobs:
             chmod +x scripts/setup_env.sh
             bash scripts/setup_env.sh
             ${{ secrets.NODE_PATH }}/npm install
+            ls
             ${{ secrets.NODE_PATH }}/pm2 restart server.js
           EOF

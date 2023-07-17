@@ -37,7 +37,6 @@ jobs:
           ssh ${{ secrets.USER }}@${{ secrets.SERVER }} <<EOF
             cd ${{ secrets.PATH }}
             source ~/.bashrc
-            source $HOME/.nvm/nvm.sh
             nvm use
             chmod +x scripts/setup_env.sh
             bash scripts/setup_env.sh

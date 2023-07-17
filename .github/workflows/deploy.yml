@@ -23,7 +23,7 @@ jobs:
       - name: Install SSH and SCP
         run: |
           apt-get update
-          apt-get install -y ssh-client scp
+          apt-get install -y ssh-client
 
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2

@@ -71,7 +71,7 @@ const content = {
             companyName:'Starting With Today',
             position: 'Director of Data Evaluation',
             years:'2023 - Present',
-            icon: 'fa-solid fa-hand-holding-heart',
+            icon: 'fa fa-heart',
             description: [
                 'Identify performance and impact gaps, and lead the development to resolving them.',
                 'Served as data advisor to external partnerships and shareholders.',
@@ -81,16 +81,6 @@ const content = {
             ]
         },
         {
-            companyName:'Monumental Sports',
-            position: 'Software Engineer',
-            years:'2023 - 2023',
-            icon: 'fa fa-basketball-ball',
-            description: [
-                'Setup internal documentation for all microservices, resources and pipelines.'
-            ]
-        },
-
-        {
             companyName:'Black Cape',
             position: 'SR. Software Engineer',
             years:'2019 - Present',
@@ -99,6 +89,15 @@ const content = {
                 'Build out data extraction pipeline for Natural Language Processing on employee resume information.',
                 'Converted Fast APIs to communicate through REST interface instead of Protocol Buffers.',
                 'Built data sync processes and REST APIs in React.JS and Hapi.JS to support a Human resource application that serves approximately 500 users.'
+            ]
+        },
+        {
+            companyName:'Monumental Sports',
+            position: 'Software Engineer',
+            years:'2023 - 2023',
+            icon: 'fa fa-soccer-ball-o',
+            description: [
+                'Setup internal documentation for all microservices, resources and pipelines.'
             ]
         },
         {

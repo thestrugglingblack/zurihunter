@@ -68,10 +68,23 @@ const content = {
     experienceSubHeader: 'I embarked on my software journey on "Ada Lovelace Day", October 13, 2015. Below is a more in-depth detail on what I have accomplished in each of my roles.',
     experience: [
         {
+            companyName:'Starting With Today',
+            position: 'Director of Data Evaluation',
+            years:'2023 - Present',
+            icon: 'fa-solid fa-hand-holding-heart',
+            description: [
+                'Identify performance and impact gaps, and lead the development to resolving them.',
+                'Served as data advisor to external partnerships and shareholders.',
+                'Utilize analytical instruments to enhance qualitative information and analysis with data-driven observations.',
+                'Create, experiment with, and monitor reactions to a variety of assessment methods and surveys, aiming to consistently evaluate the effectiveness and influence of Starting With Today across different initiatives and throughout time.',
+                'Supervise the data collection, data-driven reporting, and analysis for Starting With Today, while contributing to the establishment of performance standards for individual participants, seminar groups, and the organization as a whole.'
+            ]
+        },
+        {
             companyName:'Monumental Sports',
             position: 'Software Engineer',
             years:'2023 - 2023',
-            icon: 'fa fa-university',
+            icon: 'fa fa-basketball-ball',
             description: [
                 'Setup internal documentation for all microservices, resources and pipelines.'
             ]

@@ -19,6 +19,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '23'
+
+      - name: Install Docker
+        run: |
+          apt-get update
+          apt-get install -y docker.io
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:

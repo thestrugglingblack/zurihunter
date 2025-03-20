@@ -8,7 +8,7 @@ const content = {
         'As of 2018, I was nominated as DCA Live Power Women in Tech. ' +
         'When I am not volunteering or coding I like to spend my free doing arts & craft and gaming. \n',
     skillsSubHeader: 'A jack of all trades is a master of none, but oftentimes better than a master of one.',
-    yearsOfExp: 7,
+    yearsOfExp: 9,
     technologiesSubHeader: 'Here is a list of technologies that I have used professionally and leisurely.',
     databases: [
         'MongoDB',
@@ -73,7 +73,7 @@ const content = {
             companyName:'National Football League',
             position: 'Full Stack Engineer',
             years:'2023 - Present',
-            icon: 'fa fa-football',
+            icon: 'fa fa-line-chart',
             description: [
                 'Develop and maintain data pipelines to ingest and process various types of NFL data sources using AWS Lambda and Step Functions.',
                 'Deploy Shiny(R) applications into AWS utilizing infrastructure as code AWS-CDK.',
@@ -160,6 +160,13 @@ const content = {
             degreeType: 'B.S.',
             icon: 'fa fa-laptop',
             description: 'Information Systems program focuses on educating students to create and apply business solutions which integrate information systems technologies and analytical knowledge. Students are prepared to produce solutions of the highest quality through focused study of people, processes and technology.'
+        },
+        {
+            universityName: 'Harvard University',
+            major: 'Data Science',
+            degreeType: 'M.S.',
+            icon: 'fa fa-leanpub',
+            description: 'The masters programs provides technical, analytical, and practical skills to tackle real-world, data-driven challenges by mastering predictive modeling, machine learning, AI, data visualization, and big data, while also developing expertise in data exploration, management, ethical considerations, and effective communication to drive informed decision-making across various fields.'
         }
     ],
     awards: [
@@ -185,6 +192,10 @@ const content = {
         {
             title: '4C or Not 4C? That is the question... A War Story on learning about Convolutional Neural Networks',
             link: 'https://www.youtube.com/watch?v=LtqaumBsuPM'
+        },
+        {
+            title: 'Carnegie Mellon Sports Analytics Conference 2024: NFL Data Huddle',
+            link: 'https://youtu.be/stUzZBW8C1M?si=LxX0Rr0vmbEIEj2d'
         }
 
     ],
@@ -221,7 +232,8 @@ const content = {
         linkedin: 'https://www.linkedin.com/in/zuri-hunter-748ba514/',
         twitch: 'https://www.twitch.tv/thestrugglingblack',
         gitlab: 'https://www.gitlab.com/thestrugglingblack',
-        github: 'https://www.github.com/thestrugglingblack'
+        github: 'https://www.github.com/thestrugglingblack',
+        bluesky: 'https://bsky.app/profile/thestrugglingblack.bsky.social'
     }
 
 }

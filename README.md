@@ -32,3 +32,6 @@
 ## Hosting
 
 ## Credit
+
+## Resources
+[App Runner HostID](https://docs.aws.amazon.com/general/latest/gr/apprunner.html)

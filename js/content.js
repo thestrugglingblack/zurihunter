@@ -1,7 +1,7 @@
 const axios = require('axios')
 const content = {
-    professionalProfile: 'I am currently a software engineer at Black Cape based out in the DMV area. ' +
-        'I attended the illustrious Howard University where I obtained my bachelor’s degree in Computer Information Systems. ' +
+    professionalProfile: 'I am currently a full stack engineer at the National Football League. ' +
+        'I attended the illustrious Howard University where I obtained my bachelor’s degree in Computer Information Systems and I am currently pursuing my masters in Data Science at Harvard University. ' +
         'While completing my undergraduate degree I taught myself Ruby on Rails and applied this knowledge to several projects and local hackathons. ' +
         'One of my notable contributions was to the US Presidential Innovation Fellow, Hack the Pay Gap.\n' +
         'Outside of building amazing applications, I volunteer with Black Girls Code as a Technical Lead and , I volunteer as a hackathon organizer for Howard University’s hackathon Bison Hacks. ' +
@@ -25,18 +25,20 @@ const content = {
         'Ansible',
         'Salt',
         'Puppet',
-        'Linux'
+        'Linux',
+        'Terraform'
     ],
     toolingLibraries: [
-        'Gitlab CI/CD',
-        'Github CI/CD',
-        'Postman',
+        'GitLab CI/CD',
+        'Github Actions',
+        'Shiny',
+        'TailwindCSS',
         'Jenkins',
         'Celery',
         'React.JS',
         'FastAPI',
         'Node.JS',
-        'Jupyter Notebook'
+        'ElasticSearch'
     ],
     programmingLanguagesSubHeader: 'Here is a list of programming languages that I have used professionally and leisurely.',
     programmingLanguage: [
@@ -48,29 +50,44 @@ const content = {
         },
         {
             id: 'progressBarTwo',
-            percentage: '80%',
+            percentage: '85%',
             language: 'Python',
             proficiency: 'Proficient'
         },
         {
             id: 'progressBarThree',
-            percentage: '75%',
-            language: 'Ruby',
+            percentage: '80%',
+            language: 'SQL',
             proficiency: 'Competent'
         },
         {
             id: 'progressBarFour',
-            percentage: '30%',
-            language: 'Java',
+            percentage: '10%',
+            language: 'R',
             proficiency: 'Novice'
         }
     ],
     experienceSubHeader: 'I embarked on my software journey on "Ada Lovelace Day", October 13, 2015. Below is a more in-depth detail on what I have accomplished in each of my roles.',
     experience: [
         {
+            companyName:'National Football League',
+            position: 'Full Stack Engineer',
+            years:'2023 - Present',
+            icon: 'fa fa-football',
+            description: [
+                'Develop and maintain data pipelines to ingest and process various types of NFL data sources using AWS Lambda and Step Functions.',
+                'Deploy Shiny(R) applications into AWS utilizing infrastructure as code AWS-CDK.',
+                'Troubleshoot and resolve UI bugs for a mission critical application that support NFL game operations.',
+                'Place scripts and applications in Docker containers for production and development use cases.',
+                'Developed desktop application for analyzing user traffic with Electron JS.',
+                'Integrate web applications with Okta and AWS Cognito to handle authentication/authorization.',
+                'Create CI/CD pipelines with Code Build and Code Pipeline for NFL packages, applications and pipelines.',
+            ]
+        },
+        {
             companyName:'Starting With Today',
             position: 'Director of Data Evaluation',
-            years:'2023 - Present',
+            years:'2023 - 2024',
             icon: 'fa fa-heart',
             description: [
                 'Identify performance and impact gaps, and lead the development to resolving them.',
@@ -200,7 +217,7 @@ const content = {
     portfolioSubHeader: 'This is a detailed list of all of side projects that I have worked on in my past time.',
     contactSubHeader: 'Please feel free to reach out to me if you are interested in having me on as a speaker and drop a follow on social media.',
     socialMedia: {
-        twitter: 'https://twitter.com/ZuriHunter',
+        twitter: 'https://x.com/ZuriHunter',
         linkedin: 'https://www.linkedin.com/in/zuri-hunter-748ba514/',
         twitch: 'https://www.twitch.tv/thestrugglingblack',
         gitlab: 'https://www.gitlab.com/thestrugglingblack',

@@ -1,14 +1,14 @@
 const axios = require('axios')
 const content = {
-    professionalProfile: 'I am currently a software engineer at Black Cape based out in the DMV area. ' +
-        'I attended the illustrious Howard University where I obtained my bachelor’s degree in Computer Information Systems. ' +
+    professionalProfile: 'I am currently a full stack engineer at the National Football League. ' +
+        'I attended the illustrious Howard University where I obtained my bachelor’s degree in Computer Information Systems and I am currently pursuing my masters in Data Science at Harvard University. ' +
         'While completing my undergraduate degree I taught myself Ruby on Rails and applied this knowledge to several projects and local hackathons. ' +
         'One of my notable contributions was to the US Presidential Innovation Fellow, Hack the Pay Gap.\n' +
         'Outside of building amazing applications, I volunteer with Black Girls Code as a Technical Lead and , I volunteer as a hackathon organizer for Howard University’s hackathon Bison Hacks. ' +
         'As of 2018, I was nominated as DCA Live Power Women in Tech. ' +
         'When I am not volunteering or coding I like to spend my free doing arts & craft and gaming. \n',
     skillsSubHeader: 'A jack of all trades is a master of none, but oftentimes better than a master of one.',
-    yearsOfExp: 7,
+    yearsOfExp: 10,
     technologiesSubHeader: 'Here is a list of technologies that I have used professionally and leisurely.',
     databases: [
         'MongoDB',
@@ -25,18 +25,20 @@ const content = {
         'Ansible',
         'Salt',
         'Puppet',
-        'Linux'
+        'Linux',
+        'Terraform'
     ],
     toolingLibraries: [
-        'Gitlab CI/CD',
-        'Github CI/CD',
-        'Postman',
+        'GitLab CI/CD',
+        'Github Actions',
+        'Shiny',
+        'TailwindCSS',
         'Jenkins',
         'Celery',
         'React.JS',
         'FastAPI',
         'Node.JS',
-        'Jupyter Notebook'
+        'ElasticSearch'
     ],
     programmingLanguagesSubHeader: 'Here is a list of programming languages that I have used professionally and leisurely.',
     programmingLanguage: [
@@ -48,29 +50,43 @@ const content = {
         },
         {
             id: 'progressBarTwo',
-            percentage: '80%',
+            percentage: '85%',
             language: 'Python',
             proficiency: 'Proficient'
         },
         {
             id: 'progressBarThree',
-            percentage: '75%',
-            language: 'Ruby',
+            percentage: '80%',
+            language: 'SQL',
             proficiency: 'Competent'
         },
         {
             id: 'progressBarFour',
-            percentage: '30%',
-            language: 'Java',
+            percentage: '10%',
+            language: 'R',
             proficiency: 'Novice'
         }
     ],
     experienceSubHeader: 'I embarked on my software journey on "Ada Lovelace Day", October 13, 2015. Below is a more in-depth detail on what I have accomplished in each of my roles.',
     experience: [
         {
+            companyName:'National Football League',
+            position: 'Data Engineer/Full Stack Developer',
+            years:'2023 - Present',
+            icon: 'fa fa-line-chart',
+            description: [
+                "Deployed and maintained a Shiny-based Schedule Analysis application on AWS using ECS and Cognito (Integrated with Okta) ensuring secure, reliable, and scalable performance across development and production to support the NFL Broadcasting team's game scheduling decisions.",
+                "Designed and implemented a CI/CD pipeline using AWS Code Commit, Code Build and Code Pipeline to automatically test, build and push Docker images to Elastic Container Registry.",
+                "Built and containerized a Shiny application by executing build scripts and creating optimized Docker images for cloud deployment.",
+                'Developed front-end features for the “Player Health and Safety” game day operations application in Next.js, supporting both Equipment and Athletic managers with operational insights.',
+                "Served as a Site Reliability Engineer (SRE) across multiple internal applications, implementing logging capabilities with both Sentry and AWS CloudWatch for proactive error monitoring and performance tracking.",
+                "Conducted data analysis on flag football rules across the nation to provide actionable insights and recommendations to the VP of Football Operation for potential league adoption."
+            ]
+        },
+        {
             companyName:'Starting With Today',
             position: 'Director of Data Evaluation',
-            years:'2023 - Present',
+            years:'2023 - 2024',
             icon: 'fa fa-heart',
             description: [
                 'Identify performance and impact gaps, and lead the development to resolving them.',
@@ -83,7 +99,7 @@ const content = {
         {
             companyName:'Black Cape',
             position: 'SR. Software Engineer',
-            years:'2019 - Present',
+            years:'2019 - 2023',
             icon: 'fa fa-rocket',
             description: [
                 'Build out data extraction pipeline for Natural Language Processing on employee resume information.',
@@ -143,6 +159,21 @@ const content = {
             degreeType: 'B.S.',
             icon: 'fa fa-laptop',
             description: 'Information Systems program focuses on educating students to create and apply business solutions which integrate information systems technologies and analytical knowledge. Students are prepared to produce solutions of the highest quality through focused study of people, processes and technology.'
+        },
+        {
+            universityName: 'Harvard University',
+            major: 'Data Science',
+            degreeType: 'M.S.',
+            icon: 'fa fa-leanpub',
+            description: 'The masters programs provides technical, analytical, and practical skills to tackle real-world, data-driven challenges by mastering predictive modeling, machine learning, AI, data visualization, and big data, while also developing expertise in data exploration, management, ethical considerations, and effective communication to drive informed decision-making across various fields.'
+        }
+    ],
+    certificates: [
+        {
+            name: 'AWS Certified Solutions Architect - Associate',
+            year: '2024',
+            link: 'https://www.credly.com/badges/ca34fc26-e004-4d0f-9a04-b7bf102e498e/linked_in_profile'
+
         }
     ],
     awards: [
@@ -168,6 +199,10 @@ const content = {
         {
             title: '4C or Not 4C? That is the question... A War Story on learning about Convolutional Neural Networks',
             link: 'https://www.youtube.com/watch?v=LtqaumBsuPM'
+        },
+        {
+            title: 'Carnegie Mellon Sports Analytics Conference 2024: NFL Data Huddle',
+            link: 'https://youtu.be/stUzZBW8C1M?si=LxX0Rr0vmbEIEj2d'
         }
 
     ],
@@ -200,11 +235,12 @@ const content = {
     portfolioSubHeader: 'This is a detailed list of all of side projects that I have worked on in my past time.',
     contactSubHeader: 'Please feel free to reach out to me if you are interested in having me on as a speaker and drop a follow on social media.',
     socialMedia: {
-        twitter: 'https://twitter.com/ZuriHunter',
+        twitter: 'https://x.com/ZuriHunter',
         linkedin: 'https://www.linkedin.com/in/zuri-hunter-748ba514/',
         twitch: 'https://www.twitch.tv/thestrugglingblack',
         gitlab: 'https://www.gitlab.com/thestrugglingblack',
-        github: 'https://www.github.com/thestrugglingblack'
+        github: 'https://www.github.com/thestrugglingblack',
+        bluesky: 'https://bsky.app/profile/thestrugglingblack.bsky.social'
     }
 
 }

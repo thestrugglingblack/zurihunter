@@ -92,11 +92,11 @@
                 </span>
             </a>
 
-            <a href="../blog.html">
-                <span id="link_blog">
-                    Blog
-                </span>
-            </a>
+{{!--             <a href="../blog.html"> --}}
+{{!--                 <span id="link_blog"> --}}
+{{!--                     Blog --}}
+{{!--                 </span> --}}
+{{!--             </a> --}}
         </nav>
         <div class="copyright"> © Zuri Hunter.<br>
             All Rights Reserved.
@@ -130,7 +130,7 @@
                         <h3>Professional Profile</h3>
                         <p>{{content.professionalProfile}}<br>
                         </p>
-                        <a href="../docs/2022ResumeZH.pdf" class="button">Download resume as PDF format</a></div>
+                        <a href="../docs/ZH_resume_25.pdf" class="button">Download resume as PDF format</a></div>
                 </div>
             </article>
 
@@ -165,15 +165,15 @@
                                             class="percent"></span> </span></div>
                                     <div class="col-6 chart-text">
                                         <h4>Data Engineering</h4>
-                                        <p>Competent, 2 years</p>
+                                        <p>Competent, 5 years</p>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="col-6"><span class="chart" data-percent="65"><span
+                                    <div class="col-6"><span class="chart" data-percent="85"><span
                                             class="percent"></span> </span></div>
                                     <div class="col-6 chart-text">
-                                        <h4>Scrum Master</h4>
-                                        <p>Novice, 1 years</p>
+                                        <h4>Cloud & DevOps</h4>
+                                        <p>Competent, 6 years</p>
                                     </div>
                                 </div>
                             </div>
@@ -308,6 +308,15 @@
                         <div class="container-sub skill-list">
                             <div class="full-divider"></div>
                             <div class="row">
+                                <h3>Certificates</h3>
+                                {{#each content.certificates}}
+                                    <p><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span
+                                            class="pa-spacing"></span><b><a href="{{link}}" target="_blank"
+                                                                            rel="noopener noreferrer">{{year}} {{name}}</a></b>
+                                    </p>
+                                {{/each}}
+
+                                <div class="full-divider"></div>
                                 <h3>Awards</h3>
                                 {{#each content.awards}}
                                     <p><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span
@@ -408,6 +417,11 @@
                                         <div class="contact-text">
                                             <div class="col-2 icon-block email"><i class="fa fa-github"></i></div>
                                             <div class="flot-left"><a href={{content.socialMedia.github}}> GitHub<br/> <strong>@thestrugglingblack</strong></a><br>
+                                            </div>
+                                        </div>
+                                        <div class="contact-text">
+                                            <div class="col-2 icon-block email"><i class="fa fa-cloud"></i></div>
+                                            <div class="flot-left"><a href={{content.socialMedia.bluesky}}> Bluesky<br/> <strong>@thestrugglingblack</strong></a><br>
                                             </div>
                                         </div>
                                     </div>

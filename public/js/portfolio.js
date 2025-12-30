@@ -44,6 +44,20 @@
     }));
   };
 
+
+    const reinitializeScroll = () => {
+    setTimeout(() => {
+      const scrollPane = $('.content-scroller');
+      if (scrollPane.length && scrollPane.data('jsp')) {
+        scrollPane.data('jsp').reinitialise();
+        console.log('jScrollPane reinitialized');
+      }
+
+      $(window).trigger('resize');
+    }, 100);
+  };
+
+
   try {
     let repos = getCachedData();
 
@@ -91,7 +105,11 @@
       liTag.appendChild(figureTag);
       repoDiv.appendChild(liTag);
     });
+
+    reinitializeScroll();
+
   } catch (error) {
     console.error('Error:', error);
+        reinitializeScroll();
   }
 })(window);

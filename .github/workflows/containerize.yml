@@ -2,7 +2,7 @@ name: Build Website Container Image
 
 on:
   push:
-    branches: [ migrate-aws-tf ]
+    branches: [ main ]
 
 jobs:
   deploy:

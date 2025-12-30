@@ -63,10 +63,30 @@ const content = {
             percentage: '30%',
             language: 'Java',
             proficiency: 'Novice'
+        },
+        {
+            id: 'progressBarFive',
+            percentage: '20%',
+            language: 'R',
+            proficiency: 'Novice'
         }
     ],
     experienceSubHeader: 'I embarked on my software journey on "Ada Lovelace Day", October 13, 2015. Below is a more in-depth detail on what I have accomplished in each of my roles.',
     experience: [
+        {
+            companyName:'National Football League',
+            position: 'Data Engineer/Full Stack Developer',
+            years:'2023 - Present',
+            icon: 'fa fa-heart',
+            description: [
+                "Deployed and maintained a Shiny-based Schedule Analysis application on AWS using ECS and Cognito (Integrated with Okta) ensuring secure, reliable, and scalable performance across development and production to support the NFL Broadcasting team's game scheduling decisions.",
+                "Designed and implemented a CI/CD pipeline using AWS Code Commit, Code Build and Code Pipeline to automatically test, build and push Docker images to Elastic Container Registry.",
+                "Built and containerized a Shiny application by executing build scripts and creating optimized Docker images for cloud deployment.",
+                'Developed front-end features for the “Player Health and Safety” game day operations application in Next.js, supporting both Equipment and Athletic managers with operational insights.',
+                "Served as a Site Reliability Engineer (SRE) across multiple internal applications, implementing logging capabilities with both Sentry and AWS CloudWatch for proactive error monitoring and performance tracking.",
+                "Conducted data analysis on flag football rules across the nation to provide actionable insights and recommendations to the VP of Football Operation for potential league adoption."
+            ]
+        },
         {
             companyName:'Starting With Today',
             position: 'Director of Data Evaluation',
@@ -83,7 +103,7 @@ const content = {
         {
             companyName:'Black Cape',
             position: 'SR. Software Engineer',
-            years:'2019 - Present',
+            years:'2019 - 2023',
             icon: 'fa fa-rocket',
             description: [
                 'Build out data extraction pipeline for Natural Language Processing on employee resume information.',
